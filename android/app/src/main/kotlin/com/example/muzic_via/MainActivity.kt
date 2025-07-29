@@ -1,4 +1,4 @@
-package com.example.muzic_via
+package com.linus.muzicvia
 
 import io.flutter.embedding.android.FlutterActivity
 
