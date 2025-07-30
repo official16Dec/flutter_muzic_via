@@ -69,44 +69,42 @@ class _SplashScreenState extends State<SplashScreen>
               fit: BoxFit.cover, // Covers the entire screen
             ),
           ),
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ScaleTransition(
-                  scale: _scaleAnimation,
-                  child: FadeTransition(
-                    opacity: _fadeAnimation,
-                    child: Container(
-                      padding: const EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Image.asset(
-                        'assets/appIcon.png', // Replace with your icon path
-                        width: 100,
-                        height: 100,
-                      ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ScaleTransition(
+                scale: _scaleAnimation,
+                child: FadeTransition(
+                  opacity: _fadeAnimation,
+                  child: Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Image.asset(
+                      'assets/appIcon.png', // Replace with your icon path
+                      width: 100,
+                      height: 100,
                     ),
                   ),
                 ),
-                const SizedBox(height: 10),
-                FadeTransition(
-                    opacity: _titleAnimation,
-                    child : Container(
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('assets/muzicvia_title.png'),
-                        ),
-                        shape: BoxShape.rectangle,
+              ),
+              const SizedBox(height: 10),
+              FadeTransition(
+                  opacity: _titleAnimation,
+                  child : Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('assets/muzicvia_title.png'),
                       ),
-                      height: 60,
-                    )
-                ),
-              ],
-            ),
-          )
+                      shape: BoxShape.rectangle,
+                    ),
+                    height: 60,
+                  )
+              ),
+            ],
+          ),
         )
     );
   }
