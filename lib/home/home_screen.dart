@@ -41,7 +41,19 @@ class HomeScreen extends StatelessWidget {
               height: 20.0,       // Height of the divider widget, including the line and any surrounding space.
               indent: 16.0,       // Left padding of the line
               endIndent: 16.0,    // Right padding of the line
-            )
+            ),
+            Expanded(
+              child: ListView.builder(
+              itemCount: 5,
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                    height: 50,
+                    color: index%2==0 ? Colors.amber[600] : Colors.amber[100],
+                    child: const Center(child: Text('Entry A')),
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),
